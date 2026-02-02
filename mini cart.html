@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart clone</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000000c2;
+            padding: 50px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: rgb(4, 63, 255);
+            font-size: 100px;
+            margin: 0;
+        }
+
+        header input {
+            width: 300px;
+            padding: 5px;
+            border-radius: 20px;
+            border: none;
+            margin-right: 20px;
+        }
+
+        header button {
+            background-color: #250cc9c2;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav {
+            background-color: #a38db9;
+            padding: 10px;
+            text-align: left;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+            color: white;
+            font-size: 18px;
+        }
+
+        .product-card p {
+            
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 120px;
+            padding: auto;
+            color: rgb(4, 63, 255);
+            font-size: 30px;
+            cursor: pointer;
+        }
+        nav ul li:hover {
+            text-decoration: underline;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: rgb(43, 226, 98);
+            padding: 100px;
+            text-align: left;
+
+        }
+        .product-card {
+            background-color: rgb(116, 226, 43);
+            padding: 100px;
+            margin: 10px;
+            text-align: center;
+        }
+        .product-card img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .product-card h3 {
+            color: white;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: white;
+            font-size: 18px;
+        }
+
+        .product-card button {
+            background-color: #a30cc9c2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+            font-size: 18px;
+
+       .product-card button:hover {
+            background-color: #a30cc9c2;
+        }
+
+        .product-card img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .product-card h3 {
+            color: rgb(128, 31, 255);
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: rgb(128, 31, 255);
+            font-size: 18px;
+        }
+
+        .product-card button {
+            background-color: #a30cc9c2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+
+        }
+        .product-card button:hover {
+            background-color: #a30cc9c2;
+        }
+        .product-card button:active {
+            background-color: #a30cc9c2;
+        }
+        .product-card button:focus {
+            background-color: #a30cc9c2;
+        }
+        .product-card img {
+            width: 350px;
+            height: 350px;
+        }
+
+        .product-card h3 {
+            color: rgb(128, 31, 255);
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: rgb(128, 31, 255);
+            font-size: 18px;
+        }
+        .product-card button {
+            background-color: #a30cc9c2;
+            color: rgb(14, 8, 8);
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+
+        }
+        .product-card button:hover {
+            background-color: #1c0cc9c2;
+        }
+        .product-card button:active {
+            background-color: #250cc9c2;
+        }
+        .product-card button:focus {
+            background-color: #0c19c9c2;
+        }
+        footer {
+            background-color: #000000c2;
+            color: rgb(128, 31, 255);
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!---header--->
+    <header>
+        <h1>Mini Flipkart</h1>
+    <input type="text" placeholder="Search for products, brands and more">
+        <button class="Search-btn">Search</button>
+        </header>
+        
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li>Electronics</li>
+                <li>Fashion</li>
+                <li>Home</li>
+                <li>Application</li>
+                <li>Books</li>
+                <li>More</li>
+            </ul>
+        </nav>
+
+        <!-- product Grid -->
+        <section class="products">
+            <div class="product-card">
+                <img src="https://st1.techlusive.in/wp-content/uploads/2025/01/iQOO-Z9-Lite-5G-1.jpg">
+                <h3>Smart phone</h3>
+                <p>$15,000</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz2iywW3bGSH53_DRUx08BmUNGpgoqJ8c3aQ&s">
+                <h3>Laptop</h3>
+                <p>$50,000</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202110/Screenshot_2021-10-05_at_5.33._1200x768.png?size=690:388">
+                <h3>Headphones</h3>
+                <p>$1,500</p>
+                <button>Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="https://5.imimg.com/data5/CA/CP/MY-54923456/roadster-men-black-500x500.png">
+                <h3>Roadster Shirt</h3>
+                <p>$500</p>
+                <button>Buy Now</button>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Flipkart Clone. All rights reserved.</p>
+        </footer>
+</body>
+</html>
+
