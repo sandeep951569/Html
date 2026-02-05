@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emblem Empire</title>
+    <link rel="shortcut icon"
+        href="https://tse4.mm.bing.net/th/id/OIP.WZPWJdvRLfkyFwSMzMQhhgHaE7?w=1900&h=1265&rs=1&pid=ImgDetMain&o=7&rm=3"
+        type="image/x-icon">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url("https://wallpapercave.com/wp/iKd4wfO.jpg") center/cover no-repeat fixed;
+            color: white;
+            animation: fadeIn 1.5s ease;
+        }
+
+        /* Fade in page */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Dark overlay */
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            z-index: -1;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 30px;
+            animation: slideDown 1.2s ease;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        header h1 {
+            font-size: 3.2rem;
+            letter-spacing: 3px;
+        }
+
+        header p {
+            opacity: 0.85;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Buttons */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease;
+        }
+
+        .button-container button {
+            padding: 12px 26px;
+            font-size: 16px;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            background: rgba(255,255,255,0.25);
+            backdrop-filter: blur(10px);
+            color: white;
+            transition: all 0.5s ease;
+            box-shadow: 0 0 0 rgba(255,255,255,0);
+        }
+
+        .button-container button:hover {
+            background: black;
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255,255,255,0.4);
+        }
+
+        /* Brand grid */
+        .brands {
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 35px;
+        }
+
+        /* Brand Card */
+        .brand {
+            height: 280px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 22px;
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.6s ease;
+            animation: floatUp 1.5s ease forwards;
+        }
+
+        /* Floating animation */
+        @keyframes floatUp {
+            from { transform: translateY(40px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Dark gradient overlay */
+        .brand::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            transition: opacity 0.5s;
+        }
+
+        /* Brand name */
+        .brand span {
+            position: relative;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transform: translateY(20px);
+            opacity: 0.9;
+            transition: all 0.5s ease;
+        }
+
+        /* Hover Effects */
+        .brand:hover {
+            transform: scale(1.12) translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+        }
+
+        .brand:hover span {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .brand:hover::before {
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            opacity: 0.7;
+            animation: fadeIn 3s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <header>
+        <h1>Emblem Empire</h1>
+        <p>Luxury • Speed • Innovation</p>
+    </header>
+
+    <div class="button-container">
+        <a href="login_page.html"><button>Login</button></a>
+        <a href="sign_up.html"><button>Sign Up</button></a>
+    </div>
+
+    <section class="brands">
+        <div class="brand"
+            style="background-image:url('https://wallpapers4screen.com/Uploads/14-7-2022/38732/thumb2-maruti-suzuki-brezza-4k-crossovers-2022-cars-japanese-cars.jpg')">
+            <span>Maruti Suzuki</span>
+        </div>
+
+        <div class="brand"
+            style="background-image:url('https://w0.peakpx.com/wallpaper/943/675/HD-wallpaper-tata-nexon-crossovers-2020-cars-studio-2020-tata-nexon-indian-cars-tata.jpg')">
+            <span>Tata Motors</span>
+        </div>
+
+        <div class="brand" style="background-image:url('https://wallpaperbat.com/img/1515344-mahindra-thar-2021-wallpaper.jpg')">
+            <span>Mahindra</span>
+        </div>
+        <div class="brand"
+            style="background-image:url('https://www.hdwallpapers.in/thumbs/2020/hyundai_tucson_hybrid_2021_4k_5k_hd_cars_2-t2.jpg')">
+            <span>Hyundai</span>
+        </div>
+
+        <div class="brand"
+            style="background-image:url('https://tse4.mm.bing.net/th/id/OIP.ngHHfYlSqPwPHgFgvi6bNwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3')">
+            <span>Honda</span>
+        </div>
+        <div class="brand"
+            style="background-image:url('https://tse2.mm.bing.net/th/id/OIP.uqx8uGvPtT84mFQbjysEvwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3')">
+            <span>Toyota</span>
+        </div>
+        <div class="brand"
+            style="background-image:url('https://tse2.mm.bing.net/th/id/OIP.hyA4qhy_qBfeqVQ_uWYWcgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3')">
+            <span>Ford</span>
+        </div>
+        <div class="brand"
+            style="background-image:url('https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/topics/magazine-article-pool/2024/wallpaper/m-wallpaper/3-0-csl/bmw-3-0-csl-mi-05.jpg')">
+            <span>BMW</span>
+        </div>
+        <div class="brand"
+            style="background-image:url('https://tse3.mm.bing.net/th/id/OIP.yIc-aR8JJuAfIqYjHzC0SAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3')">
+            <span>Kia</span>
+        </div>
+        <div class="brand"
+            style="background-image:url('https://tse3.mm.bing.net/th/id/OIP.X5O01m6C1GHaX5krHZKUlAHaEK?rs=1&pid=ImgDetMain&o=7&rm=3')">
+            <span>Nissan</span>
+        </div>
+        <div class="brand"
+            style="background-image:url('https://tse2.mm.bing.net/th/id/OIP.7GZYLpLXsavJzr9dBcdLXAHaEo?rs=1&pid=ImgDetMain&o=7&rm=3')">
+            <span>MG Motor</span>
+        </div>
+        <div class="brand"
+            style="background-image:url('https://tse2.mm.bing.net/th/id/OIP.Y-xYIa0Byc77QaNekgg9QgHaEK?rs=1&pid=ImgDetMain&o=7&rm=3')">
+            <span>Volkswagen</span>
+        </div>
+        <div class="brand"
+            style="background-image:url('https://tse1.mm.bing.net/th/id/OIP.ztK4ThLeisH-F0DChyw7OAHaEo?rs=1&pid=ImgDetMain&o=7&rm=3')">
+            <span>Rolls-Royce</span>
+        </div>
+        <div class="brand"
+            style="background-image:url('https://wallpapercat.com/w/middle-retina/5/f/2/3006-1920x1080-desktop-1080p-audi-background.jpg')">
+            <span>Audi</span>
+        </div>
+        <div class="brand"
+            style="background-image:url('https://www.notonlycars.net/wp-content/uploads/2020/08/cropped-Ferrari-La-Ferrari-scaled-2-2048x1132.jpg')">
+            <span>Ferrari</span>
+        </div>
+        <div class="brand"
+            style="background-image:url('https://tse2.mm.bing.net/th/id/OIP.fSP9vI5bJjCpPsYuP3UW4wHaEc?w=1920&h=1152&rs=1&pid=ImgDetMain&o=7&rm=3')">
+            <span>Lamborghini</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Emblem Empire • Designed by MURARI SANDEEP</p>
+    </footer>
+
+</body>
+</html>
