@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forgot Page</title>
+
+<style>
+body{
+    background-image: url("https://wallpapers.com/images/featured/4k-car-g6a4f0e15hkua5oa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Main box */
+.forgot-container {
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(10px);         
+    border-radius: 10px;                
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 8px 32px rgba(91, 91, 92, 0.37);
+    padding: 20px;
+    width: 400px;
+    height: 350px;
+    text-align: center;
+}
+
+h1{
+    color: black;
+    margin-bottom: 30px;
+}
+
+h5{
+    color: white;
+    margin-top: 15px;
+}
+
+input {
+    width: 220px;
+    height: 25px;
+    margin-bottom: 15px;
+    padding: 6px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+/* Button styled as link */
+.send-btn {
+    display: inline-block;
+    width: 235px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #999696;
+    color: black;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 0.4s;
+    margin-bottom: 20px;
+}
+
+.send-btn:hover {
+    background-color: black;
+    color: wheat;
+}
+#help {
+    color: white;
+    text-decoration: none;
+}
+#help:hover{
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+/* ===== POPUP ===== */
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.popup:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-content {
+    background: white;
+    width: 300px;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 15% auto;
+    animation: zoom 0.4s ease;
+}
+
+@keyframes zoom {
+    from { transform: scale(0.6); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 18px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 12px;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="forgot-container">
+    <h1>Reset your Username / Password</h1>
+
+    <input type="text" placeholder="Username">
+    <input type="email" placeholder="Email">
+
+    <!-- Button triggers popup -->
+    <a href="#popup1" class="send-btn">Send Code</a>
+    <br>
+    <a href="help_center.html" id="help">Help Center</a>
+    
+</div>
+
+<!-- POPUP -->
+<div id="popup1" class="popup">
+    <div class="popup-content">
+        <h3>✅ Code Sent!</h3>
+        <p>Please check your email for the reset code.</p>
+        <a href="#" class="close">Close</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup</title>
+
+<style>
+body{
+    background-image: url("https://wallpapers.com/images/featured/ferrari-cglqdk3qgwuhk35k.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ---------------- SIGNUP CONTAINER ---------------- */
+.login-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+.login-container img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+h1, h5 {
+    color: white;
+}
+
+input {
+    width: 220px;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+/* Signup Button */
+.signup-btn {
+    display: inline-block;
+    width: 240px;
+    height: 35px;
+    line-height: 35px;
+    background: #9c9c9c;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.4s;
+    user-select: none;
+}
+
+.signup-btn:hover {
+    background: black;
+    color: wheat;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff3c3c;
+}
+
+/* ---------------- POPUP ---------------- */
+#popup-toggle {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.popup-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 300px;
+    text-align: center;
+    transform: scale(0.7);
+    transition: 0.4s;
+}
+
+.popup-box h2 {
+    color: green;
+    margin-top: 0;
+}
+
+.popup-box p {
+    margin: 10px 0;
+}
+
+.popup-box label {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 30px;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* SHOW POPUP */
+#popup-toggle:checked ~ .popup {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#popup-toggle:checked ~ .popup .popup-box {
+    transform: scale(1);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hidden Checkbox (IMPORTANT POSITION) -->
+<input type="checkbox" id="popup-toggle">
+
+<!-- Signup Card -->
+<div class="login-container">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/033/882/148/small_2x/transparent-background-person-icon-free-png.png">
+    <h1>Sign Up</h1>
+
+    <input type="text" placeholder="First Name">
+    <input type="text" placeholder="Last Name">
+    <input type="number" placeholder="Mobile Number">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+
+    <label for="popup-toggle" class="signup-btn">Sign Up</label>
+
+    <h5>Already have an account? <a href="login_page.html">Login</a></h5>
+</div>
+
+<!-- POPUP -->
+<div class="popup">
+    <div class="popup-box">
+        <h2>🎉 Success!</h2>
+        <p>Your account has been created.</p>
+        <label for="popup-toggle">OK</label>
+    </div>
+</div>
+
+</body>
+</html>

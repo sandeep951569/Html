@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Century Schoolbook;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            flex-wrap: wrap;
+        }
+
+        #head {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+
+        #submit {
+            background-color: #434242;
+            color: #fff;
+        }
+
+        #submit:hover {
+            background-color: #65656c;
+            transition: 0.5s;
+        }
+
+        #signin {
+            background-color: #0022fd;
+            color: #fff;
+        }
+
+        #signin:hover {
+            background-color: #5264da;
+            transition: 0.5s;
+        }
+
+        /* ===== MAIN SECTION ===== */
+        .main {
+            background-image: url('https://images6.alphacoders.com/685/thumb-1920-685698.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+            text-align: center;
+            color: black;
+        }
+
+        .main h1 {
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            max-width: 400px;
+            height: 40px;
+            border-radius: 50px;
+            border: 2px solid #535252;
+            padding: 10px 15px;
+        }
+
+        #search {
+            padding: 10px 25px;
+            border-radius: 20px;
+            background-color: #fff;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+
+        #search:hover {
+            background-color: #000;
+            color: white;
+            transition: 0.6s;
+        }
+
+        /* ===== CARDS ===== */
+        .sections {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .manage, .authenticate, .support {
+            width: 300px;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 40px;
+            border: 2px solid #000;
+            text-align: center;
+            transition: 0.5s;
+        }
+        .manage:hover,
+        .authenticate:hover,
+        .support:hover {
+            background-color: rgb(249, 238, 217);
+        }
+
+        #learn {
+            text-decoration: none;
+            color: rgb(152, 142, 244);
+            font-weight: bold;
+        }
+
+        #learn:hover {
+            color: rgb(43, 0, 255);
+            transition: 0.5s;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-buttons {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <nav class="navbar">
+        <h4 id="head">Emblem Empire | Help Center</h4>
+
+        <div class="nav-buttons">
+            <button id="submit">Submit a request</button>
+            <button id="signin">Sign in</button>
+        </div>
+    </nav>
+</header>
+
+<div class="main">
+    <h1>How can we help?</h1>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search">
+        <button id="search">Search</button>
+    </div>
+
+    <div class="sections">
+        <div class="manage">
+            <h2>Manage your account</h2>
+            <p>Manage your account settings, such as your email address and password.</p>
+            <a href="#" id="learn">Learn more →</a>
+        </div>
+
+        <div class="authenticate">
+            <h2>Authentication</h2>
+            <p>An authentication problem occurs when verification fails.</p>
+            <a href="#" id="learn">Learn more →</a>
+        </div>
+
+        <div class="support">
+            <h2>Support</h2>
+            <p>Get in touch with a human.</p>
+            <a href="#" id="learn">Learn more →</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

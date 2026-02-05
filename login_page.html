@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LOGIN PAGE</title>
+
+<style>
+body {
+    background-image: url("https://wallpapercave.com/wp/wp2341196.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Login box */
+.login-container {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 8px 32px rgba(91, 91, 92, 0.37);
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+h2 {
+    color: #141313;
+}
+
+input {
+    width: 220px;
+    height: 25px;
+    margin-bottom: 12px;
+    padding: 6px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+/* Login button as link */
+.login-btn {
+    display: inline-block;
+    width: 235px;
+    height: 35px;
+    line-height: 35px;
+    background: #999696;
+    color: black;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.login-btn:hover {
+    background: #000000d4;
+    color: wheat;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+/* ===== POPUP ===== */
+.popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.popup:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup-content {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15% auto;
+    text-align: center;
+    animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 14px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="login-container">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/033/882/148/small_2x/transparent-background-person-icon-free-png.png">
+    <h2>Member Login</h2>
+
+    <form>
+        <input type="email" placeholder="Email">
+        <input type="password" placeholder="Password">
+    </form>
+
+    <!-- LOGIN BUTTON -->
+    <a href="#popup1" class="login-btn">Login</a>
+
+    <br><br>
+    <a href="forgot_page.html">Forgot Username/Password?</a>
+    <h5 style="color:white">Don't have an account? <a href="sign_up.html">Sign Up</a></h5>
+    
+</div>
+
+<!-- POPUP -->
+<div id="popup1" class="popup">
+    <div class="popup-content">
+        <h3>Login Successfuly...✅</h3>
+        <a href="#" class="close">Close</a>
+    </div>
+</div>
+
+</body>
+</html>
